@@ -1,47 +1,28 @@
-class Dado {
+import Dado from "./Dado.js";
+
+class Main {
     constructor() {
+        document.querySelector("#btnDado").addEventListener("click", () => {
+            sumaDeRepeticiones();
 
-        sumaDeRepeticiones();
+            function sumaDeRepeticiones() {
+                let dado = new Dado();
 
-        function sumaDeRepeticiones() {
-            let array = [0, 0, 0, 0, 0, 0];
+                let array = [0, 0, 0, 0, 0, 0];
 
-            for (let i = 1; i <= 100; i++) {
-                let numeroElegido = lanzarDado();
-
-                switch (numeroElegido) {
-                    case 1:
-                        array[0]++;
-                        break;
-                    case 2:
-                        array[1]++;
-                        break;
-                    case 3:
-                        array[2]++;
-                        break;
-                    case 4:
-                        array[3]++;
-                        break;
-                    case 5:
-                        array[4]++;
-                        break;
-                    case 6:
-                        array[5]++;
-                        break;
+                for (let i = 0; i < 100; i++) {
+                    let numeroElegido = dado.lanzarDado();
+                    array[numeroElegido - 1]++;
                 }
+
+                for (let ii = 0; ii < array.length; ii++) {
+                    console.log("El " + (ii + 1) + " se repitió " + array[ii] + " veces.")
+                }
+
             }
 
-            for (let ii = 0; ii < array.length; ii++) {
-                console.log("El " + (ii + 1) + " se repitió " + array[ii] + " veces.")
-            }
-
-        }
-
-        function lanzarDado() {
-            let numeroAleatorio = Math.floor(Math.random() * (7 - 1) + 1);
-            return numeroAleatorio;
-        }
+        });
     }
 }
 
-let dado = new Dado();
+let m = new Main();

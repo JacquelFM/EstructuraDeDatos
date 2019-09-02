@@ -8,8 +8,12 @@ class Main {
         let dado = new Dado();
 
         document.querySelector("#btnDadoUno").addEventListener("click", () => {
-            obtenerPasos(corredorUno);
 
+            //Corregir esto
+            obtenerPasos(corredorUno);
+            obtenerPasos(corredorDos);
+
+            document.querySelector("#posicionDos").innerHTML = "Posición: " + corredorDos.posicion;
             document.querySelector("#posicionUno").innerHTML = "Posición: " + corredorUno.posicion;
 
         });
@@ -17,7 +21,11 @@ class Main {
         function obtenerPasos(numCorredor) {
             let numPasos = dado.lanzarDado();
 
-            if (numCorredor.ganar() == false) {
+            // NOTA: Un while y corregir valor pasos del dado
+
+            while (corredorUno.posicion < 100 && corredorDos.posicion < 100) {
+
+                //Corregir esto
                 if (numPasos <= 3) {
                     if (numPasos == 1) {
                         numCorredor.correr(3);
@@ -26,25 +34,17 @@ class Main {
                     }
                 }
                 obtenerGanador(numCorredor);
-            } else {
-                obtenerGanador(numCorredor);
             }
         }
 
         function obtenerGanador(numCorredor) {
-            if (numCorredor.ganar() == true && corredorDos.posicion == corredorUno.posicion) {
+            if (corredorDos.ganar() == true && corredorUno.ganar() == true) {
                 document.querySelector("#mostrarGanador").innerHTML = "Hubo un empate entre los corredores";
             } else if (numCorredor.ganar() == true) {
                 document.querySelector("#mostrarGanador").innerHTML = "El ganador es el corredor #" + numCorredor.numero;
             }
         }
 
-        document.querySelector("#btnDadoDos").addEventListener("click", () => {
-            obtenerPasos(corredorDos);
-
-            document.querySelector("#posicionDos").innerHTML = "Posición: " + corredorDos.posicion;
-
-        });
     }
 }
 

@@ -1,0 +1,17 @@
+// super.avanzar();
+
+//Crear la clase que me permita controlar un elevador 
+al contruir debo decir de cuántos pisos es y su capacidad
+y puedo mover el elevador entre esos pisos
+ saber el estado de la puerta
+
+ el1= new Elevador(5, 1000);
+
+ abrir puertas
+ cerrar puerta cambiar de piso
+
+ ---------> ¿Está abierta o cerrada? False, true
+
+ //va a un piso
+
+ ¿Qué hay y cómo lo puedo a poder controlar?

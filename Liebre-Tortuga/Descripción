@@ -13,3 +13,14 @@ salto pequeño 35 % +1 paso
 resbalon pequeño 15% -2 pasos
 
 Considerar el uso de clases y herencia.
+
+
+//////////////
+
+class Carrera{
+    constructor(){
+        this._liebre=new Liebre(1);
+    }
+
+}
+

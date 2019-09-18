@@ -1,0 +1,19 @@
+Registro para control de inventario de un negocio
+ARTÍCULO
+    -> Código //Id para buscar.
+    -> Nombre
+    -> Precio
+    -> Cantidad
+    -> Descripción
+    toString(); //Prentación de un artículo, lo que creamos que es prudente.
+
+HTML crear una interfaz que permita agregar, buscar, eliminar,
+generar un reporte, insertar en una posición.
+
+En un vector //
+
+
+
+
+
+Después: Propio método de ordenamiento

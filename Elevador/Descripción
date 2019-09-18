@@ -1,7 +1,7 @@
 // super.avanzar();
 
 //Crear la clase que me permita controlar un elevador 
-al contruir debo decir de cuántos pisos es y su capacidad
+al construir debo decir de cuántos pisos es y su capacidad
 y puedo mover el elevador entre esos pisos
  saber el estado de la puerta
 

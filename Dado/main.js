@@ -11,7 +11,7 @@ class Main {
                 let array = [0, 0, 0, 0, 0, 0];
 
                 for (let i = 0; i < 100; i++) {
-                    let numeroElegido = dado.lanzarDado();
+                    let numeroElegido = dado.lanzar();
                     array[numeroElegido - 1]++;
                 }
 

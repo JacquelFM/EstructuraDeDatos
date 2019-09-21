@@ -1,0 +1,15 @@
+Utilizando una clase crear un registro para control de inventario de un negocio.
+
+ARTICULO
+codigo
+nombre
+precio
+cantidad
+descripcion
+toString();
+
+
+En HTML crear una interfaz que permita agregar, buscar, eliminar,
+generar un reporte, insertar en una posición e ir mostrando el desarrollo de las actividades o interacción con el usuario en la misma interfaz.
+
+En un vector controlar el almacenamiento y control de dicha información.

@@ -43,13 +43,13 @@ class Main {
 
                 articulos = nuevosArticulos;
 
-                registro.tabla = tabla;
+                // registro.tabla = tabla;
 
                 for (let i = 0; i < articulos.length; i++) {
                     registro.agregarArticulo(articulos[i]);
                 }
 
-                registro.articulos = articulos;
+                registro.modificarDatos(articulos);
 
             } else {
                 articulos.push(new Articulo(
@@ -60,7 +60,7 @@ class Main {
                     intDescripcion
                 ));
 
-                let longitud = articulos.length;
+                longitud = articulos.length;
                 registro.agregarArticulo(articulos[longitud - 1]);
 
             }

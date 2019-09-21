@@ -41,8 +41,6 @@ export default class Registro {
 
         this._articulos.push(articulo);
 
-        console.log(this._articulos);
-
     }
 
     eliminarArticulo(row, articulo) {
@@ -68,8 +66,10 @@ export default class Registro {
 
     }
 
-    mostrarArticulos(articulo) {
+    modificarDatos(nuevosArticulos) {
+        this._articulos = nuevosArticulos;
 
+        console.log(this._articulos);
     }
 
 }

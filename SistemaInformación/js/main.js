@@ -3,12 +3,11 @@ import Registro from "./Registro.js";
 
 class Main {
     constructor() {
-
         let registro = new Registro(
             document.querySelector("#tablaArticulos")
         );
         let articulos = new Array();
-        let tabla = [document.querySelector("#tablaArticulos")];
+        let tabla = document.querySelector("#tablaArticulos");
 
         document.querySelector("#btnAgregar").addEventListener("click", () => {
             let intCodigo = document.querySelector("#numCodigo").value;
@@ -21,9 +20,8 @@ class Main {
 
 
             if (posicionAgregar > 0 && (longitud > 0 && posicionAgregar <= longitud)) {
-                console.log(posicionAgregar);
-
                 let nuevosArticulos = [];
+                registro.modificarTabla();
 
                 for (let i = 0; i < (posicionAgregar - 1); i++) {
                     nuevosArticulos.push(articulos[i]);
@@ -43,8 +41,6 @@ class Main {
 
                 articulos = nuevosArticulos;
 
-                // registro.tabla = tabla;
-
                 for (let i = 0; i < articulos.length; i++) {
                     registro.agregarArticulo(articulos[i]);
                 }
@@ -62,7 +58,6 @@ class Main {
 
                 longitud = articulos.length;
                 registro.agregarArticulo(articulos[longitud - 1]);
-
             }
 
         });

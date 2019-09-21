@@ -2,15 +2,11 @@ export default class Registro {
     constructor(tabla) {
         this._tabla = tabla;
         this._articulos = [];
+        this._tablaBase = this._tabla.innerHTML;
     }
 
     set tabla(nuevaTabla) {
         this._tabla = nuevaTabla;
-    }
-
-    set articulos(nuevosArticulos) {
-        this._articulos = [];
-        this._articulos = nuevosArticulos;
     }
 
     agregarArticulo(articulo) {
@@ -68,8 +64,13 @@ export default class Registro {
 
     modificarDatos(nuevosArticulos) {
         this._articulos = nuevosArticulos;
+    }
 
-        console.log(this._articulos);
+    modificarTabla() {
+
+        this._tabla.innerHTML = this._tablaBase;
+
+        //console.log(this._tablaBase);
     }
 
 }

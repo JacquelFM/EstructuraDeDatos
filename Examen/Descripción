@@ -1,0 +1,18 @@
+1.- Presionando un botón, mostrar las parejas
+de números amigos menor a la cantidad puesta en una caja de texto.
+
+Dos números a y b se consideran amigos si 
+son diferentes y si "a" es igual 
+a la suma de divisores de b menores a b, 
+además si b es igual a la 
+suma de divisores de a menos a "a"
+
+2. Creas las estructuras de Clase necesarias para administrar la información
+de una ruta de transporte.
+Una ruta se compone de 1 nombre, tiempo en minutos,
+cincoBases(una base tiene un nombre, latitud y longitd "x y y")
+en las bases como información de la ruta tiene el tiempo en minutos para llegar a ella, 
+tiene 5 salidas, na salida es un camión, una base, una hora de inicio,
+hora fin y la secuencia.
+
+No HTML, no llenar nada, sólo las clases y sus got y set.

@@ -4,8 +4,6 @@ document.querySelector("#btnSacar").addEventListener("click", () => {
 
     sacarNumerosAmigos(intCantidadParejas);
 
-    console.log(intCantidadParejas);
-
 });
 
 function sacarNumerosAmigos(intCantidadParejas) {
@@ -24,16 +22,9 @@ function sacarNumerosAmigos(intCantidadParejas) {
 }
 
 function esAmigo(a, b) {
-    console.log(a + "," + b)
-
-    //console.log(sumaDivisores(b));
-    //console.log(sumaDivisores(a));
-
     if ((a == sumaDivisores(b)) && (b == sumaDivisores(a))) {
-
-        console.log("yes");
-    } else {
-        console.log("nel");
+        console.log(a + "," + b);
+        console.log("Sí");
     }
 }
 

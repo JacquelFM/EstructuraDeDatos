@@ -25,21 +25,19 @@ export default class Registro {
             for (let i = 1; i <= this._longitudArray; i++) {
                 this.agregarArticuloTabla(this._articulos[i - 1]);
             }
-        } else {
-            alert("Lo sentimos, ya no hay espacios disponibles.");
         }
 
         console.log(this._articulos);
     }
 
     ordenarArticulos() {
-        for (let k = 0; k < this._longitudArray; k++) {
+        for (let ii = 0; ii < this._longitudArray; ii++) {
             for (let i = 0; i < this._longitudArray; i++) {
                 for (let j = 0; j < this._longitudArray; j++) {
                     if (this._articulos[i].codigo < this._articulos[j].codigo) {
-                        let a = this._articulos[i];
+                        let temp = this._articulos[i];
                         this._articulos[i] = this._articulos[j];
-                        this._articulos[j] = a;
+                        this._articulos[j] = temp;
                     }
                 }
             }
@@ -97,6 +95,13 @@ export default class Registro {
             });
 
         return result;
+    }
+
+    mostrarArticuloBuscado(intCodigoABuscar) {
+        let resultado = this.buscarArticulo(intCodigoABuscar);
+
+        alert(this._articulos[resultado].toString());
+
     }
 
     modificarTabla() {

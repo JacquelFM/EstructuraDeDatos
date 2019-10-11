@@ -3,9 +3,7 @@ import Registro from "./Registro.js";
 
 class Main {
     constructor() {
-        let registro = new Registro(
-            document.querySelector("#tablaArticulos")
-        );
+        let registro = new Registro();
 
         document.querySelector("#btnAgregar").addEventListener("click", () => {
             let intCodigo = document.querySelector("#numCodigo").value;
@@ -14,7 +12,7 @@ class Main {
             let intCantidad = Number(document.querySelector("#cantidad").value);
             let intDescripcion = document.querySelector("#descripcionArticulo").value;
 
-            registro.agregarArticuloPrueba(
+            registro.agregarArticulo(
                 new Articulo(
                     intCodigo,
                     intNombre,
@@ -26,8 +24,13 @@ class Main {
         });
 
         document.querySelector("#btnBuscar").addEventListener("click", () => {
-            let intCodigoABuscar = document.querySelector("#intCodigoBuscar").value;
-            registro.mostrarArticuloBuscado(intCodigoABuscar);
+            //registro.mostrarArticulos();  ->  check;
+
+            // registro.mostrarArticulosInversos(); ->  check;
+
+            //registro.buscarArticulos("A13");  -> check;
+
+            registro.eliminarArticulos("A14");
 
         });
     }

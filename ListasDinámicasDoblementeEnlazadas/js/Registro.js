@@ -13,15 +13,42 @@ export default class Registro {
         } else {
             this._agregarArticulo(nuevoArticulo, this._lista);
         }
+
+        console.log(this._lista);
     }
 
     _agregarArticulo(nuevoArticulo, ultimo) {
+
+        console.log(ultimo.despues)
         if (ultimo.despues == null) {
             ultimo.despues = nuevoArticulo;
+            ultimo.despues.anterior = ultimo;
+
+            console.log("p0");
+
+        } else if (nuevoArticulo.codigo < ultimo.despues.codigo) {
+            console.log("p1");
+
+            nuevoArticulo.despues = ultimo.despues;
+            nuevoArticulo.anterior = ultimo;
+            ultimo.despues = nuevoArticulo;
+
+            console.log(this._lista);
+
+
+        } else if (nuevoArticulo.codigo > ultimo.despues.codigo) {
+            console.log("p2");
+
+            nuevoArticulo.anterior = ultimo.despues;
+            ultimo.despues.despues = nuevoArticulo;
+
+            console.log(this._lista);
+
         } else {
             this._agregarArticulo(nuevoArticulo, ultimo.despues);
         }
     }
+
 
     mostrarArticulos() {
         let alguien = this._lista;

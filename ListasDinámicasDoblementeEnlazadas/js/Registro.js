@@ -26,21 +26,13 @@ export default class Registro {
 
             console.log("p0");
 
-        } else if (nuevoArticulo.codigo < ultimo.despues.codigo) {
+        } else if ((nuevoArticulo.codigo > ultimo.codigo) && (nuevoArticulo.codigo < ultimo.despues.codigo)) {
             console.log("p1");
 
             nuevoArticulo.despues = ultimo.despues;
             nuevoArticulo.anterior = ultimo;
             ultimo.despues = nuevoArticulo;
-
-            console.log(this._lista);
-
-
-        } else if (nuevoArticulo.codigo > ultimo.despues.codigo) {
-            console.log("p2");
-
-            nuevoArticulo.anterior = ultimo.despues;
-            ultimo.despues.despues = nuevoArticulo;
+            ultimo.despues.despues.anterior = nuevoArticulo;
 
             console.log(this._lista);
 
